@@ -11,16 +11,16 @@ import android.view.ViewGroup;
  */
 public abstract class BaseFragment extends Fragment {
 
-    protected View mactivityview;
-    protected LayoutInflater minflater;
+    protected View mfragmentview;
+    protected LayoutInflater mfragmentinflater;
     protected Bundle savedInstanceState;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // TODO Auto-generated method stub
-        this.minflater = inflater;
+        this.mfragmentinflater = inflater;
         setConvertView();
-        return mactivityview;
+        return mfragmentview;
     }
 
     @Override

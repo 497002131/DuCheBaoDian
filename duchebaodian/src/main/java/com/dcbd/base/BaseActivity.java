@@ -20,7 +20,6 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected View mactivityview;
     private InputMethodManager inputMethodManager;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);

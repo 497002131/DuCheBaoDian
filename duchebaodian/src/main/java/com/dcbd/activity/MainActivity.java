@@ -22,7 +22,6 @@ public class MainActivity extends BaseActivity {
     private FragmentMap fragmentMap;
     private FragmentMe fragmentMe;
     private FragmentTopics fragmentTopics;
-
     private Fragment[] fragments;
     /**
      * 点击的界面

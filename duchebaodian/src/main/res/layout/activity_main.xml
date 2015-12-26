@@ -22,33 +22,42 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@color/basetitlecolor"
+            android:button="@null"
             android:checked="true"
             android:gravity="center"
             android:onClick="onTabClicked"
             android:text="地图"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textSize="@dimen/mainactivitybottomtextsize" />
 
         <RadioButton
             android:id="@+id/radio_topics"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@color/basetitlecolor"
+            android:button="@null"
             android:checked="true"
             android:gravity="center"
             android:onClick="onTabClicked"
             android:text="话题"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textSize="@dimen/mainactivitybottomtextsize" />
 
         <RadioButton
             android:id="@+id/radio_me"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@color/basetitlecolor"
+            android:button="@null"
             android:checked="true"
             android:gravity="center"
             android:onClick="onTabClicked"
             android:text="我"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textSize="@dimen/mainactivitybottomtextsize" />
     </RadioGroup>
 
 </LinearLayout>
