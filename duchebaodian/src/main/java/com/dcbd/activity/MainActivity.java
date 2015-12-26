@@ -1,9 +1,9 @@
 package com.dcbd.activity;
 
 import android.os.Bundle;
-
+import com.dcbd.R;
 import com.dcbd.base.BaseActivity;
-import com.duchebaodain.R;
+
 
 public class MainActivity extends BaseActivity {
 
