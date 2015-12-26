@@ -6,9 +6,8 @@ import com.dcbd.R;
 import com.dcbd.common.Utils;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
+
 import org.apache.http.entity.StringEntity;
-
-
 
 
 /**
@@ -32,7 +31,7 @@ public class CustomHttpRequest {
             return;
         }
 
-        if (httpClient ==null) {
+        if (httpClient == null) {
             httpClient = new AsyncHttpClient();
         }
 
@@ -67,7 +66,7 @@ public class CustomHttpRequest {
             return;
         }
         StringEntity entity = new StringEntity(jsonString, "UTF_8");
-        if (httpClient ==null) {
+        if (httpClient == null) {
             httpClient = new AsyncHttpClient();
         }
         httpClient.post(context, url, entity, "application/json",
@@ -88,6 +87,7 @@ public class CustomHttpRequest {
 
     public interface HttpRequestCallback {
         public abstract void success(String success);
+
         public abstract void fial(String fial);
     }
 
