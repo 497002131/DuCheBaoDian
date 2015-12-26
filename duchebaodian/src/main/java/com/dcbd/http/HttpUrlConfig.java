@@ -1,7 +1,8 @@
 package com.dcbd.http;
 
 /**
- * Created by Administrator on 2015/12/26.
+ * 网络请求的地址配置
  */
 public class HttpUrlConfig {
+    public static String BASE_URL = "http://www.hwamei.cc";
 }

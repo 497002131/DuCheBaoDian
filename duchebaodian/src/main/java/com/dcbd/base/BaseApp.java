@@ -1,16 +1,3 @@
-/**
- * Copyright (C) 2013-2014 EaseMob Technologies. All rights reserved.
- * <p>
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * http://www.apache.org/licenses/LICENSE-2.0
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package com.dcbd.base;
 
 import android.app.Application;
@@ -19,23 +6,27 @@ import android.content.Context;
 import com.dcbd.bean.DCBD_Info;
 
 public class BaseApp extends Application {
-
     public static Context applicationContext;
     // 当前登录的化妆品公司用户信息
     public static DCBD_Info dcbd_info;
-    private static BaseApp instance;
+    //是否正在更新下载
     private boolean isDownload;
+    /**
+     * private的构造函数用于避免外界直接使用new来实例化对象
+     */
+    private BaseApp() {
+    }
 
     public static BaseApp getInstance() {
-        return instance;
+        return SingletonHolder.INSTANCE;
     }
+
 
     @Override
     public void onCreate() {
         super.onCreate();
 
         applicationContext = this;
-        instance = this;
         isDownload = false;
 
         // 初始化用户信息
@@ -51,4 +42,10 @@ public class BaseApp extends Application {
         this.isDownload = isDownload;
     }
 
+    private static class SingletonHolder {
+        /**
+         * 单例对象实例
+         */
+        static final BaseApp INSTANCE = new BaseApp();
+    }
 }

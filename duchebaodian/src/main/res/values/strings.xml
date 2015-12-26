@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">DuCheBaoDian</string>
+    <string name="app_name">堵车宝典</string>
+    <string name="connect_failuer_toast">请检查网络或稍候重试</string>
 </resources>
